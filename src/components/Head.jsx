@@ -18,7 +18,7 @@ const Head = () => {
           <BsList className='text-xl' />
         </button>
 
-        <img src={logoLight} alt='youtube logo' className='w-24' />
+        <img src={logoLight} alt='youtube logo' className='w-[88px]' />
       </div>
       <div className='flex gap-4'>
         <div className='flex items-center'>
