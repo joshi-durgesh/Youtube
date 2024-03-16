@@ -1,9 +1,4 @@
-import {
-  BsHouseDoor,
-  SiYoutubeshorts,
-  MdOutlineSubscriptions,
-} from "./IconComponents";
-import sidebarContent from "../utils/sidebar-content.json";
+import sidebarContent from "../utils/sidebarContent";
 
 const Sidebar = () => {
   return (
