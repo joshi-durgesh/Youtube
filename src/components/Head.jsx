@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux";
 import logoLight from "../assets/logo-light.png";
 import {
   BsList,
@@ -9,12 +10,20 @@ import {
   FiSun,
   FiMoon,
 } from "./IconComponents";
+import { toggleMenu } from "../utils/appSlice";
 
 const Head = () => {
+  const dispatch = useDispatch();
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
   return (
     <header className='flex my-1 mx-2 justify-between'>
       <div className='flex items-center gap-4'>
-        <button className='inline-block p-2 rounded-full hover:bg-neutral-200'>
+        <button
+          onClick={() => toggleMenuHandler()}
+          className='inline-block p-2 rounded-full hover:bg-neutral-200'
+        >
           <BsList className='text-xl' />
         </button>
 

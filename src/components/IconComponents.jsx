@@ -22,6 +22,7 @@ import { BiMoviePlay } from "react-icons/bi";
 import { PiGameController } from "react-icons/pi";
 import { GrTrophy } from "react-icons/gr";
 import { GiHanger } from "react-icons/gi";
+import { ImFilePlay } from "react-icons/im";
 
 export {
   BsList,
@@ -49,4 +50,5 @@ export {
   AiOutlineBulb,
   GiHanger,
   MdOutlinePodcasts,
+  ImFilePlay,
 };

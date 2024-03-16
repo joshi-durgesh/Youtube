@@ -16,9 +16,10 @@ import {
   AiOutlineBulb,
   GiHanger,
   MdOutlinePodcasts,
+  ImFilePlay,
 } from "../components/IconComponents";
 
-const sidebarContent = [
+export const sidebarContent = [
   {
     id: "Main",
     item: [
@@ -103,4 +104,24 @@ const sidebarContent = [
     ],
   },
 ];
-export default sidebarContent;
+
+export const sidebarContent2 = {
+  item: [
+    {
+      name: "Home",
+      icon: BsHouseDoor,
+    },
+    {
+      name: "Shorts",
+      icon: SiYoutubeshorts,
+    },
+    {
+      name: "Subscriptions",
+      icon: MdOutlineSubscriptions,
+    },
+    {
+      name: "You",
+      icon: ImFilePlay,
+    },
+  ],
+};
