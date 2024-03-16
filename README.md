@@ -20,7 +20,7 @@
 
 add this inside content
 
-        "./src/\*_/_.{js,jsx}"
+        "./src/\**/*.{js,jsx}"
 
 #### index.js
 
