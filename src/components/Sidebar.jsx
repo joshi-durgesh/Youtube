@@ -10,9 +10,9 @@ const Sidebar = () => {
         <ul className='flex flex-col gap-6 pt-6'>
           {sidebarContent2.item.map((data) => {
             return (
-              <li className='flex flex-col gap-1 items-center px-1 py-3 rounded-lg hover:bg-neutral-200 '>
+              <li className='flex flex-col gap-1 items-center px-1 py-3 rounded-lg dark:text-white hover:bg-neutral-200  dark:hover:bg-neutral-700'>
                 <data.icon className='text-xl' />
-                <span className='text-[9px]'>{data.name}</span>
+                <span className='text-[9px] dark:text-white'>{data.name}</span>
               </li>
             );
           })}
@@ -24,14 +24,17 @@ const Sidebar = () => {
     <div className=' pl-2 pr-2 h-[93vh] overflow-hidden hover:overflow-auto '>
       {sidebarContent.map((data) => {
         return (
-          <ul key={data.id} className='flex flex-col w-full border-b pb-3 pt-3'>
+          <ul
+            key={data.id}
+            className='flex flex-col w-full border-b pb-3 pt-3 dark:text-white'
+          >
             {data?.item.map((item) => {
               const ContentIcon = item.icon;
               const name = item.name;
               return (
                 <li
                   key={name}
-                  className='text-sm  flex gap-5 px-2 py-2 rounded-lg hover:bg-neutral-200'
+                  className='text-sm  flex gap-5 px-2 py-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-500'
                 >
                   <ContentIcon className='inline-block text-xl' />
                   <span>{name}</span>

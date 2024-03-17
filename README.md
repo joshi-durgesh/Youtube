@@ -40,3 +40,7 @@ add this inside index.js
         npm install react-icons --save
 
 redux store installed and toggle feature created
+
+## Features
+
+- Dark mode implemented

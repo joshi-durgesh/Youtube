@@ -25,11 +25,11 @@ const Head = () => {
     dispatch(toggleDarkMode());
   };
   return (
-    <header className='flex my-1 mx-2 justify-between'>
+    <header className='flex py-1 px-2 justify-between w-full dark:text-white'>
       <div className='flex items-center gap-4'>
         <button
           onClick={() => toggleMenuHandler()}
-          className='inline-block p-2 rounded-full hover:bg-neutral-200'
+          className='inline-block p-2 rounded-full dark:hover:bg-neutral-700 hover:bg-neutral-200'
         >
           <BsList className='text-xl' />
         </button>
@@ -46,29 +46,29 @@ const Head = () => {
             type='text'
             placeholder='
             Search'
-            className='border p-[0.28rem] pl-4 rounded-l-full  w-[30rem] focus:outline-none focus:border-blue-500 focus:shadow-inner-custom'
+            className='border p-[0.28rem] pl-4 rounded-l-full  w-[30rem] focus:outline-none focus:border-blue-500 focus:shadow-inner-custom dark:bg-neutral-900 dark:focus:border-blue-500 dark:border-neutral-500'
           />
-          <button className='hover:bg-neutral-100 bg-neutral-50 px-6 py-[0.4rem] rounded-r-full border border-l-0'>
+          <button className='hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 bg-neutral-50 px-6 py-[0.4rem] rounded-r-full border border-l-0 dark:border-neutral-500'>
             <IoIosSearch className='text-xl' />
           </button>
         </div>
-        <button className='inline-block p-2 rounded-full bg-neutral-100 hover:bg-neutral-200'>
+        <button className='inline-block p-2 rounded-full bg-neutral-100 dark:bg-neutral-700 dark:hover:bg-neutral-600 hover:bg-neutral-200'>
           <MdOutlineMic className='text-xl' />
         </button>
       </div>
       <div className='flex gap-4'>
-        <button className='inline-block p-2 rounded-full  hover:bg-neutral-200'>
+        <button className='inline-block p-2 rounded-full dark:hover:bg-neutral-700 hover:bg-neutral-200'>
           <RiVideoAddLine className='text-xl' />
         </button>
-        <button className='inline-block p-2 rounded-full  hover:bg-neutral-200'>
+        <button className='inline-block p-2 rounded-full dark:hover:bg-neutral-700 hover:bg-neutral-200'>
           <CgBell className='text-xl' />
         </button>
-        <button className='inline-block p-2 rounded-full  bg-neutral-100'>
+        <button className='inline-block p-2 rounded-full  dark:bg-neutral-700 bg-neutral-100'>
           <LuUser2 className='text-xl' />
         </button>
         <button
           onClick={() => toggleDarkModeHandler()}
-          className='inline-block p-2 rounded-full  hover:bg-neutral-200'
+          className='inline-block p-2 rounded-full  hover:bg-neutral-200 dark:text-white  dark:hover:bg-neutral-700'
         >
           {darkMode ? (
             <FiSun className='text-xl' />
