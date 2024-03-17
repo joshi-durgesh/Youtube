@@ -44,3 +44,4 @@ redux store installed and toggle feature created
 ## Features
 
 - Dark mode implemented
+- youtube api and api key added
