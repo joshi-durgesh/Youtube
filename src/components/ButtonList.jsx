@@ -1,5 +1,5 @@
 const ButtonList = () => {
-  return <div>ButtonList</div>;
+  return <div className='bg-red-200 w-full'>ButtonList</div>;
 };
 
 export default ButtonList;

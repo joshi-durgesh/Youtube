@@ -38,3 +38,5 @@ add this inside index.js
 ### installed react-icons
 
         npm install react-icons --save
+
+redux store installed and toggle feature created

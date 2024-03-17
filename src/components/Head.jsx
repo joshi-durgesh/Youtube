@@ -1,5 +1,6 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import logoLight from "../assets/logo-light.png";
+import logoDark from "../assets/logo-dark.png";
 import {
   BsList,
   IoIosSearch,
@@ -10,12 +11,18 @@ import {
   FiSun,
   FiMoon,
 } from "./IconComponents";
-import { toggleMenu } from "../utils/appSlice";
+import { toggleDarkMode, toggleMenu } from "../utils/appSlice";
 
 const Head = () => {
   const dispatch = useDispatch();
+  const darkMode = useSelector((store) => store.app.isDarkMode);
+
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
+  };
+
+  const toggleDarkModeHandler = () => {
+    dispatch(toggleDarkMode());
   };
   return (
     <header className='flex my-1 mx-2 justify-between'>
@@ -27,7 +34,11 @@ const Head = () => {
           <BsList className='text-xl' />
         </button>
 
-        <img src={logoLight} alt='youtube logo' className='w-[88px]' />
+        <img
+          src={darkMode ? logoDark : logoLight}
+          alt='youtube logo'
+          className='w-[88px]'
+        />
       </div>
       <div className='flex gap-4'>
         <div className='flex items-center'>
@@ -55,9 +66,15 @@ const Head = () => {
         <button className='inline-block p-2 rounded-full  bg-neutral-100'>
           <LuUser2 className='text-xl' />
         </button>
-        <button className='inline-block p-2 rounded-full  hover:bg-neutral-200'>
-          {/* <FiSun className='text-xl' /> */}
-          <FiMoon className='text-xl' />
+        <button
+          onClick={() => toggleDarkModeHandler()}
+          className='inline-block p-2 rounded-full  hover:bg-neutral-200'
+        >
+          {darkMode ? (
+            <FiSun className='text-xl' />
+          ) : (
+            <FiMoon className='text-xl' />
+          )}
         </button>
       </div>
     </header>
