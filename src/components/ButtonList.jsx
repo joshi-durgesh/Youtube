@@ -12,6 +12,9 @@ const btnList = [
 ];
 const ButtonList = () => {
   const [btnChecked, setBtnChecked] = useState(0);
+  const handleButtonClick = (index) => {
+    setBtnChecked(index);
+  };
   return (
     <div className='mt-4 w-full flex gap-2'>
       {btnList.map((item, index) => {
@@ -22,13 +25,15 @@ const ButtonList = () => {
               name='filter'
               id={item}
               className='hidden'
-              checked={btnChecked === index ? true : false}
+              checked={btnChecked === index}
+              onChange={() => handleButtonClick(index)}
             />
             <label
               htmlFor={item}
               onClick={() => {
-                setBtnChecked(index);
+                handleButtonClick(index);
               }}
+              id={item}
               className={
                 "cursor-pointer px-3 py-1 dark:text-neutral-50 rounded-md " +
                 (btnChecked === index
