@@ -1,22 +1,13 @@
 import { useState } from "react";
 
-const btnList = [
-  "All",
-  "Gaming",
-  "Live",
-  "Music",
-  "Valorant",
-  "React",
-  "Battleground Mobile India",
-  "Food",
-];
+const btnList = ["All", "Gaming", "Live", "Music", "Valorant", "React", "Food"];
 const ButtonList = () => {
   const [btnChecked, setBtnChecked] = useState(0);
   const handleButtonClick = (index) => {
     setBtnChecked(index);
   };
   return (
-    <div className='mt-4 w-full flex gap-2'>
+    <div className='mt-4 mb-2 w-full flex gap-2'>
       {btnList.map((item, index) => {
         return (
           <span key={item}>
