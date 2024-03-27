@@ -11,10 +11,13 @@ const VideoContainer = () => {
   const getVideos = async () => {
     const data = await fetch(YOUTUBE_VIDEOS_API);
     const json = await data.json();
-    setVideoData(json?.items);
+    const filterData = json?.items.filter((data) => {
+      return data.snippet.thumbnails.maxres;
+    });
+    setVideoData(filterData);
   };
   return (
-    <div className='flex flex-wrap gap-4 relative pt-14 scrollbar-none dark:bg-black '>
+    <div className='flex flex-wrap gap-4 relative pt-14 overflow-x-hidden '>
       {videoData.map((data) => {
         return <VideoCard key={data.id} info={data} />;
       })}
