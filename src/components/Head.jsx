@@ -25,7 +25,7 @@ const Head = () => {
     dispatch(toggleDarkMode());
   };
   return (
-    <header className='flex py-1 px-2 justify-between w-full dark:text-white'>
+    <header className='flex py-2 px-2 justify-between w-full fixed z-10 bg-white dark:bg-black dark:text-white'>
       <div className='flex items-center gap-4'>
         <button
           onClick={() => toggleMenuHandler()}

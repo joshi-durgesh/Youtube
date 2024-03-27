@@ -7,7 +7,7 @@ const ButtonList = () => {
     setBtnChecked(index);
   };
   return (
-    <div className='mt-4 mb-2 w-full flex gap-2'>
+    <div className='pt-4 pb-4 w-full flex gap-2 fixed z-10 bg-white dark:bg-black'>
       {btnList.map((item, index) => {
         return (
           <span key={item}>

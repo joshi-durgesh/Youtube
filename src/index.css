@@ -13,3 +13,7 @@
 .scrollbar::-webkit-scrollbar {
   height: 8px;
 }
+
+.scrollbar-gutter {
+  scrollbar-gutter: stable;
+}

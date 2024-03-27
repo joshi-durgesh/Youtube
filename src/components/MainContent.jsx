@@ -6,7 +6,7 @@ const MainContent = () => {
   const darkMode = useSelector((store) => store.app.isDarkMode);
   return (
     <div className={darkMode ? "dark" : null}>
-      <div className='dark:bg-black  h-[100vh]'>
+      <div className='dark:bg-black  h-[100vh] relative'>
         <Head />
         <Body />
       </div>

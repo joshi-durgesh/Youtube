@@ -6,7 +6,7 @@ const Sidebar = () => {
 
   if (!isMenuOpen)
     return (
-      <div className=' pr-2 '>
+      <div className=' pr-2 fixed'>
         <ul className='flex flex-col pt-6'>
           {sidebarContent2.item.map((data) => {
             return (
@@ -21,7 +21,7 @@ const Sidebar = () => {
     );
 
   return (
-    <div className=' pl-2 pr-2 h-[93vh] overflow-hidden hover:overflow-auto '>
+    <div className=' pl-2 pr-2 h-[93vh] overflow-hidden scrollbar-gutter fixed hover:overflow-auto '>
       {sidebarContent.map((data) => {
         return (
           <ul
