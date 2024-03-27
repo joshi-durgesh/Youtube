@@ -10,7 +10,10 @@ const Sidebar = () => {
         <ul className='flex flex-col pt-6'>
           {sidebarContent2.item.map((data) => {
             return (
-              <li className='flex flex-col gap-1 items-center px-1 py-4 rounded-lg dark:text-white hover:bg-neutral-200  dark:hover:bg-neutral-700'>
+              <li
+                key={data.id}
+                className='flex flex-col gap-1 items-center px-1 py-4 rounded-lg dark:text-white hover:bg-neutral-200  dark:hover:bg-neutral-700'
+              >
                 <data.icon className='text-xl' />
                 <span className='text-[9px] dark:text-white'>{data.name}</span>
               </li>

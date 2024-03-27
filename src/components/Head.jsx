@@ -24,6 +24,7 @@ const Head = () => {
   const toggleDarkModeHandler = () => {
     dispatch(toggleDarkMode());
   };
+
   return (
     <header className='flex py-2 px-2 justify-between w-full fixed z-10 bg-white dark:bg-black dark:text-white'>
       <div className='flex items-center gap-4'>
@@ -37,7 +38,8 @@ const Head = () => {
         <img
           src={darkMode ? logoDark : logoLight}
           alt='youtube logo'
-          className='w-[88px]'
+          className='w-[88px] cursor-pointer'
+          // onClick={}
         />
       </div>
       <div className='flex gap-4'>

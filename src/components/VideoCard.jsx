@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 
 const VideoCard = ({ info }) => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
-  console.log(info);
 
   if (!info) return;
   const { snippet, statistics } = info;
