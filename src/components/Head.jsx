@@ -12,6 +12,7 @@ import {
   FiMoon,
 } from "./IconComponents";
 import { toggleDarkMode, toggleMenu } from "../utils/appSlice";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const dispatch = useDispatch();
@@ -35,12 +36,13 @@ const Head = () => {
           <BsList className='text-xl' />
         </button>
 
-        <img
-          src={darkMode ? logoDark : logoLight}
-          alt='youtube logo'
-          className='w-[88px] cursor-pointer'
-          // onClick={}
-        />
+        <Link to={"/"}>
+          <img
+            src={darkMode ? logoDark : logoLight}
+            alt='youtube logo'
+            className='w-[88px] cursor-pointer'
+          />
+        </Link>
       </div>
       <div className='flex gap-4'>
         <div className='flex items-center'>
