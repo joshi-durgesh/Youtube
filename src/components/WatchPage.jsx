@@ -1,12 +1,14 @@
 import { useSearchParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import useVideoComment from "../hooks/useVideoComment";
+import useVideoDetails from "../hooks/useVideoDetails";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
   const videoId = searchParams.get("v");
   const comments = useVideoComment(videoId);
-  console.log(comments);
+  const videoInfo = useVideoDetails(videoId);
+  console.log(videoInfo);
 
   const opts = {
     playerVars: {

@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import useChannelDetails from "../hooks/useChannelDetails";
 
 const VideoCard = ({ info }) => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
