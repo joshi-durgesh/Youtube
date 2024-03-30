@@ -1,8 +1,13 @@
 import { useSearchParams } from "react-router-dom";
 import YouTube from "react-youtube";
+import useVideoComment from "../hooks/useVideoComment";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
+  const videoId = searchParams.get("v");
+  const comments = useVideoComment(videoId);
+  console.log(comments);
+
   const opts = {
     playerVars: {
       autoplay: 1,
@@ -14,7 +19,7 @@ const WatchPage = () => {
       <div className='col-start-1 col-end-9'>
         <div className='w-full relative pb-[56.25%]'>
           <YouTube
-            videoId={searchParams.get("v")}
+            videoId={videoId}
             opts={opts}
             iframeClassName='absolute inset-0 w-full h-full rounded-xl'
           />

@@ -4,5 +4,8 @@ export const YOUTUBE_VIDEOS_API =
   GOOGLE_API_KEY;
 
 export const YOUTUBE_CHANNEL_API =
-  "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCvrhwpnp2DHYQ1CbXby9ypQ" +
+  "https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics?id=WjArnmhiJUE" +
   GOOGLE_API_KEY;
+
+export const YOUTUBE_COMMENT_API =
+  "https://www.googleapis.com/youtube/v3/commentThreads?&textFormat=plainText&part=snippet&maxResults=30&videoId=";
