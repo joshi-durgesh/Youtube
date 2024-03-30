@@ -1,23 +1,26 @@
 import { useSearchParams } from "react-router-dom";
+import YouTube from "react-youtube";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get("v"));
+  const opts = {
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
   return (
-    <div>
-      <div>
-        <div>
-          <iframe
-            src={"https://www.youtube.com/embed/" + searchParams.get("v")}
-            title='YouTube video player'
-            frameborder='0'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-            referrerpolicy='strict-origin-when-cross-origin'
-            allowfullscreen
-          ></iframe>
+    <div className='grid pt-[4.5rem] max-w-6xl mx-auto grid-cols-12 gap-5'>
+      <div className='col-start-1 col-end-9'>
+        <div className='w-full relative pb-[56.25%]'>
+          <YouTube
+            videoId={searchParams.get("v")}
+            opts={opts}
+            iframeClassName='absolute inset-0 w-full h-full rounded-xl'
+          />
         </div>
       </div>
-      <div></div>
+      <div className='col-start-9 col-span-full'>hello</div>
     </div>
   );
 };
