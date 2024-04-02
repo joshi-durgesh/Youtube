@@ -50,19 +50,20 @@ const WatchPage = () => {
             <div className='flex gap-2 items-center'>
               <img src={url} className='w-10 h-10 rounded-full' />
               <div className='flex flex-col'>
-                <span className='font-semibold dark:text-white'>
+                <span className='font-semibold dark:text-white max-w-52 text-nowrap overflow-hidden'>
                   {channelTitle}
                 </span>
                 <span className='text-[0.72rem] font-semibold dark:text-zinc-400   text-zinc-500'>
                   {subscriberTotal} subscribers
                 </span>
               </div>
-              <button className='bg-black text-white py-1 px-3 rounded-2xl ml-3'>
-                subscribe
+              <button className='bg-black dark:bg-neutral-200 dark:text-neutral-800 text-white py-1 px-3 rounded-2xl ml-3'>
+                Subscribe
               </button>
             </div>
             <div></div>
           </div>
+          <div></div>
         </div>
       </div>
       <div className='col-start-9 col-span-full'>hello</div>
