@@ -13,8 +13,23 @@ import {
 } from "./IconComponents";
 import { toggleDarkMode, toggleMenu } from "../utils/appSlice";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { YOUTUBE_SEARCH_API } from "../utils/constant";
 
 const Head = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  useEffect(() => {
+    console.log(searchQuery);
+    getSearchSuggestions();
+  }, [searchQuery]);
+
+  const getSearchSuggestions = async () => {
+    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+
+    const json = await data.json();
+    console.log(json[1]);
+  };
+
   const dispatch = useDispatch();
   const darkMode = useSelector((store) => store.app.isDarkMode);
 
@@ -48,8 +63,9 @@ const Head = () => {
         <div className='flex items-center'>
           <input
             type='text'
-            placeholder='
-            Search'
+            placeholder='Search'
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             className='border p-[0.28rem] pl-4 rounded-l-full  w-[30rem] focus:outline-none focus:border-blue-500 focus:shadow-inner-custom dark:bg-neutral-900 dark:focus:border-blue-500 dark:border-neutral-500'
           />
           <button className='hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 bg-neutral-50 px-6 py-[0.4rem] rounded-r-full border border-l-0 dark:border-neutral-500'>

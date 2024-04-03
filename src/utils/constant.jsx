@@ -11,3 +11,6 @@ export const YOUTUBE_COMMENT_API =
 
 export const YOUTUBE_VIDEO_API =
   "https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=";
+
+export const YOUTUBE_SEARCH_API =
+  "https://thingproxy.freeboard.io/fetch/http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
