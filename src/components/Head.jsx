@@ -19,13 +19,16 @@ import { YOUTUBE_SEARCH_API } from "../utils/constant";
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
   useEffect(() => {
-    console.log(searchQuery);
-    getSearchSuggestions();
+    const timer = setTimeout(() => {
+      getSearchSuggestions();
+    }, 200);
+
+    return () => clearTimeout(timer);
   }, [searchQuery]);
 
   const getSearchSuggestions = async () => {
+    console.log("API-", searchQuery);
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
-
     const json = await data.json();
     console.log(json[1]);
   };
